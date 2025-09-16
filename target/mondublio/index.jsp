@@ -1,4 +1,3 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -20,6 +19,7 @@
                         <div class="d-grid gap-3 col-6 mx-auto">
                             <a href="aleatorio.jsp" class="btn btn-primary btn-lg">Generar número aleatorio (por defecto)</a>
                             <a href="formulario.html" class="btn btn-outline-primary btn-lg">Formulario de aleatorios</a>
+                            <a href="holamundo.jsp" class="btn btn-outline-success btn-lg">Demo: Hola Mundo (Ejercicio para estudiantes)</a>
                         </div>
                     </div>
                 </div>
