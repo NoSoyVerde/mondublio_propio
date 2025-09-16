@@ -36,8 +36,10 @@
                                     }
                                 }
                             %>
-                            <a href="formulario.html" class="btn btn-outline-primary mt-4">Volver al formulario</a>
-                            <a href="index.jsp" class="btn btn-secondary mt-3 me-2">Volver a inicio</a>
+                            <div class="d-flex justify-content-center gap-3 mt-4">
+                                <a href="formulario.html" class="btn btn-outline-primary">Volver al formulario</a>
+                                <a href="index.jsp" class="btn btn-secondary">Volver a inicio</a>
+                            </div>
                         </div>
                     </div>
                 </div>
