@@ -6,30 +6,38 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%! String valor = "Mundo";%>
-//test 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>JSP Page</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Hola Mundo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <style>
+            body { background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); }
+            .brand { font-weight: bold; font-size: 2rem; color: #0d6efd; }
+            .footer { font-size: 0.9rem; color: #888; }
+        </style>
     </head>
     <body class="bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
+            <div class="container">
+                <span class="navbar-brand brand">Mondublio</span>
+                <div>
+                    <a href="index.jsp" class="btn btn-link">Inicio</a>
+                </div>
+            </div>
+        </nav>
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
+                    <div class="card shadow-lg border-0 rounded-4 mb-4">
+                        <div class="card-body p-5">
                             <!-- ejercicio 1: comentario en HTML -->
                             <% out.println("Ejercicio 1");
                                 String nombre = "Rafa";
-                                // comentario en Java
                                 for (int i = 1; i <= 10; i++) {
-                                    /* comentario en java
-                                    multiline
-                                     */
                             %>                            
                             <h1 class="h4 text-primary">Rafa es el mejor</h1>
                             <% } %>    
@@ -57,18 +65,12 @@
                             <!-- ejercicio 5 variables -->
                             <h1 class="mt-4">ejercicio 5</h1>
                             <% for (int i = 1; i <= 10; i++) {
-                                    /* comentario en java
-                                    multiline
-                                     */
                             %>                            
                             <h1 class="h5 text-warning">El valor de i es ... <%=i%></h1>
                             <% }%>  
                             <!-- ejercicio 6 variables e if -->
                             <h1 class="mt-4">ejercicio 6</h1>
                             <% for (int i = 1; i <= 10; i++) {
-                                    /* comentario en java
-                                    multiline
-                                     */
                                     if (i < 5) {
                             %>                            
                             <h1 class="h5 text-secondary">El valor de i es ... <%=i%></h1>
@@ -85,17 +87,17 @@
                             <!-- ejercicio 9 -->
                             <h1 class="mt-4">Ejercicio 9</h1>
                             <% String command = "hola"; %>
-                            <!-- dinámica: en tiempo de ejecución -->   
                             <jsp:include page="incluir_dinamica.jsp" flush="true">                      
                                 <jsp:param name="p1" value="<%=command%>" />                
                                 <jsp:param name="p2" value="Rafa" /> 
                             </jsp:include>
                         </div>
                     </div>
-                    <a href="index.jsp" class="btn btn-outline-primary w-100">Volver al inicio</a>
+                    <a href="index.jsp" class="btn btn-outline-primary w-100 rounded-pill shadow-sm">Volver al inicio</a>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6DQD1KQkQ1p2eQF1rZLrZlq2F5Dk5j5Q5Q5Q5Q5Q5Q5Q" crossorigin="anonymous"></script>
+        <footer class="footer text-center py-3 mt-auto bg-white border-top shadow-sm">&copy; 2024 Mondublio. Todos los derechos reservados.</footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
