@@ -20,6 +20,7 @@
                 <a href="index.jsp" class="btn btn-link">Inicio</a>
                 <a href="formulario.html" class="btn btn-link">Formulario</a>
                 <a href="holamundo.jsp" class="btn btn-link">Demo Hola Mundo</a>
+                <a href="mispruebas.jsp" class="btn btn-link">JSTL Pruebas</a>
             </div>
         </div>
     </nav>
