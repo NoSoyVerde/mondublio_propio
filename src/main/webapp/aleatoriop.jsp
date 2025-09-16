@@ -16,14 +16,24 @@
                         <div class="card-body text-center">
                             <h1 class="mb-4">Generación de números aleatorios</h1>
                             <% 
-                                int max = Integer.parseInt(request.getParameter("sup"));
-                                int min = Integer.parseInt(request.getParameter("inf"));
-                                if (max < min) {
-                                    out.print("<div class='alert alert-danger'>El límite superior debe ser mayor que el límite inferior</div>");
+                                String supParam = request.getParameter("sup");
+                                String infParam = request.getParameter("inf");
+                                if (supParam == null || infParam == null || supParam.isEmpty() || infParam.isEmpty()) {
+                                    out.print("<div class='alert alert-warning'>Por favor, introduce ambos límites.</div>");
                                 } else {
-                                    Random rand = new Random();
-                                    int randomNum = rand.nextInt((max - min) + 1) + min;
-                                    out.print("<h2 class='text-success'>El número generado es el... " + randomNum + "</h2>");
+                                    try {
+                                        int max = Integer.parseInt(supParam);
+                                        int min = Integer.parseInt(infParam);
+                                        if (max < min) {
+                                            out.print("<div class='alert alert-danger'>El límite superior debe ser mayor o igual que el límite inferior.</div>");
+                                        } else {
+                                            Random rand = new Random();
+                                            int randomNum = rand.nextInt((max - min) + 1) + min;
+                                            out.print("<h2 class='text-success'>El número generado es el... " + randomNum + "</h2>");
+                                        }
+                                    } catch (NumberFormatException e) {
+                                        out.print("<div class='alert alert-danger'>Por favor, introduce valores numéricos válidos.</div>");
+                                    }
                                 }
                             %>
                             <a href="formulario.html" class="btn btn-outline-primary mt-4">Volver al formulario</a>
