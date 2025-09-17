@@ -16,7 +16,8 @@
                 <div class="card shadow">
                     <div class="card-body text-center">
                         <a href="index.jsp" class="btn btn-link mb-3">&larr; Volver al menú principal</a>
-                        <h2 class="mb-4">Welcome to JSTL Example!</h2>
+                        <h2>${mensajeSaludo}</h2>
+                        <h2 class="mb-4">¡Bienvenido al ejemplo de JSTL!</h2>
                         <p class="mb-3">La hora actual es:
                             <fmt:formatDate value="<%= new java.util.Date() %>" pattern="HH:mm:ss" />
                         </p>
@@ -37,10 +38,10 @@
                             <li class="list-group-item"><%= item %></li>
                         <% } %>
                         </ul>
-                        <h3 class="mt-4">Herramienta de debug temporal:</h3>
+                        <h3 class="mt-4">Herramienta de depuración temporal:</h3>
                         <div class="text-start">
                         <% java.util.Enumeration<String> names = request.getAttributeNames();
-                            out.println("<h4>Request attributes:</h4> <ul class='list-group'>");
+                            out.println("<h4>Atributos de la request:</h4> <ul class='list-group'>");
                             while (names.hasMoreElements()) {
                                 String n = names.nextElement();
                                 out.println("<li class='list-group-item'>" + n + " = " + request.getAttribute(n) + "</li>");
