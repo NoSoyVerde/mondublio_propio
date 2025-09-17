@@ -4,7 +4,7 @@
     Author     : raznara
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%! String valor = "Mundo";%>
 <!DOCTYPE html>
 <html>
@@ -36,23 +36,23 @@
                         <div class="card-body p-5">
                             <!-- ejercicio 1: comentario en HTML -->
                             <% out.println("Ejercicio 1");
-                                String nombre = "Rafa";
+                                String nombre = "Hector";
                                 for (int i = 1; i <= 10; i++) {
                             %>                            
-                            <h1 class="h4 text-primary">Rafa es el mejor</h1>
+                            <h1 class="h4 text-primary">Hector es el mejor</h1>
                             <% } %>    
                             <!-- ejercicio 2 -->
                             <hr>
                             <% out.println("Ejercicio 2");
                                 for (int i = 1; i <= 10; i++) {
-                                    out.print("<h1 class='h4 text-success'>Rafa es el mejor</h1>");
+                                    out.print("<h1 class='h4 text-success'>Hector es el mejor</h1>");
                                 }
                             %>
                             <!-- ejercicio 3 -->
                             <hr>
                             <% out.println("Ejercicio 3");
                                 for (int i = 1; i <= 10; i++) {
-                                    out.println("<h1 class='h4 text-danger'>Rafa es el mejor</h1>");
+                                    out.println("<h1 class='h4 text-danger'>Hector es el mejor</h1>");
                                 }
                             %>
                             <h1 class="mt-4">ejercicio 4</h1>
@@ -89,7 +89,7 @@
                             <% String command = "hola"; %>
                             <jsp:include page="incluir_dinamica.jsp" flush="true">                      
                                 <jsp:param name="p1" value="<%=command%>" />                
-                                <jsp:param name="p2" value="Rafa" /> 
+                                <jsp:param name="p2" value="Hector" /> 
                             </jsp:include>
                         </div>
                     </div>
