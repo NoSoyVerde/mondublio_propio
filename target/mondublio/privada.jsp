@@ -2,10 +2,11 @@
 <%
     String user = (String) session.getAttribute("user");
     if (user == null) {
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("login.jsp?error=notlogged");
         return;
     }
-%>
+%> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,3 +33,4 @@
     </main>
 </body>
 </html>
+d">Loge

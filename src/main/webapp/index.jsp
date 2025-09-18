@@ -1,4 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%
+    String user = (String) session.getAttribute("user");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,6 +40,21 @@
                                     Servlet conexion<br>
                                     <span class="small text-warning">Conecta con un JSP y le pasa un ArrayList</span>
                                 </a>
+
+                                <% if (user == null) { %>
+                                    <!-- Si NO hay sesión, mostrar Login -->
+                                    <a href="login.jsp" class="btn btn-outline-danger">
+                                        Login <br>
+                                        <span class="small text-danger">Logeate</span>
+                                    </a>
+                                <% } else { %>
+                                    <!-- Si hay sesión, mostrar acceso a la zona privada -->
+                                    <a href="privada.jsp" class="btn btn-outline-success">
+                                        Zona Privada <br>
+                                        <span class="small text-success">Accede como <%= user %></span>
+                                    </a>
+                                <% } %>
+
                             </div>
                         </div>
                     </div>
