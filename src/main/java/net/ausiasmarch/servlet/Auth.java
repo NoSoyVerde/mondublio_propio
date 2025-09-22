@@ -14,7 +14,7 @@ public class Auth extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        if ("Hector".equals(username) && "1234".equals(password)) {
+        if ("Hector".equals(username) && "123456E".equals(password)) {
             HttpSession session = request.getSession();
             session.setAttribute("user", username);
             response.sendRedirect("privada.jsp");

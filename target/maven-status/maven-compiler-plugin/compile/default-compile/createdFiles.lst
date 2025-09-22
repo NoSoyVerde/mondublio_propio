@@ -1,3 +1,4 @@
+net/ausiasmarch/servlet/DatabaseService.class
 net/ausiasmarch/servlet/Holamundo.class
 net/ausiasmarch/servlet/Logout.class
 net/ausiasmarch/servlet/Auth.class
