@@ -6,29 +6,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet; // <- Importa esto
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/DatabaseServlet") 
+@WebServlet("/DatabaseServlet")
 public class DatabaseServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String nombre = request.getParameter("name") != null ? request.getParameter("username") : "invitado";
-        String password = request.getParameter("password") != null ? request.getParameter("password") : "invitado";
-        String email = request.getParameter("email") != null ? request.getParameter("email") : "invitado";
-        
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        String mensaje = "";
+        String nombre = request.getParameter("name") != null ? request.getParameter("name") : "invitado";
+        String password = request.getParameter("password") != null ? request.getParameter("password") : "invitado";
+        String email = request.getParameter("email") != null ? request.getParameter("email") : "invitado";
 
+        String mensaje = "";
         String strSQL = "INSERT INTO usuario (name, password, email) VALUES (?, ?, ?)";
 
         try (Connection oConnection = DatabaseService.getConnection();
