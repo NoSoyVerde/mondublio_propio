@@ -23,10 +23,8 @@ public class InfiniteConnectionServlet extends HttpServlet {
 
         int contador = 0;
 
-        // Bucle “infinito” controlado
         while (true) {
             try {
-                // Cada iteración abre una nueva conexión real
                 Connection conn = DatabaseService.getConnection();
                 PreparedStatement ps = conn.prepareStatement(
                         "INSERT INTO usuario (name, password, email) VALUES ('test" 
@@ -37,7 +35,6 @@ public class InfiniteConnectionServlet extends HttpServlet {
                 contador++;
                 System.out.println("Conexiones abiertas: " + contador);
 
-                // Pequeña pausa para que MySQL no se sature de inmediato
                 Thread.sleep(100);
 
             } catch (SQLException e) {
