@@ -1,4 +1,5 @@
 net/ausiasmarch/servlet/Holamundo.class
+net/ausiasmarch/servlet/trazabilidad/Trazabilidad.class
 net/ausiasmarch/servlet/database/InfiniteConnectionServlet.class
 net/ausiasmarch/servlet/Auth.class
 net/ausiasmarch/servlet/database/DatabaseService.class
