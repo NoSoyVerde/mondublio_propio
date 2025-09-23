@@ -27,8 +27,8 @@ public class InfiniteConnectionServlet extends HttpServlet {
             try {
                 Connection conn = DatabaseService.getConnection();
                 PreparedStatement ps = conn.prepareStatement(
-                        "INSERT INTO usuario (name, password, email) VALUES ('test" 
-                        + contador + "', '123', 'test" + contador + "@test.com')");
+                        "INSERT INTO usuario (name, password, email) VALUES ('test"
+                                + contador + "', '123', 'test" + contador + "@test.com')");
 
                 ps.executeUpdate();
 

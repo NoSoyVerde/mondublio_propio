@@ -1,7 +1,7 @@
 package net.ausiasmarch.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList; 
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/conexion")
 public class Conexion extends HttpServlet {
-    
+
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         // Lista de elementos
@@ -28,7 +28,7 @@ public class Conexion extends HttpServlet {
         String nombre = "Pepito";
 
         // Condicional: si el nombre es "Héctor"
-          // <-- aquí puedes cambiarlo directamente
+        // <-- aquí puedes cambiarlo directamente
         String mensaje;
         if ("Hector".equalsIgnoreCase(nombre)) {
             mensaje = "¡Hola guapetón!";
