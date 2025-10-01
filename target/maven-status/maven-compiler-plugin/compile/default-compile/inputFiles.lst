@@ -1,6 +1,7 @@
 /home/a10900612/Asignaturas/Entorno_cliente/Mondublio/mondublio/src/main/java/net/ausiasmarch/servlet/Logout.java
 /home/a10900612/Asignaturas/Entorno_cliente/Mondublio/mondublio/src/main/java/net/ausiasmarch/servlet/Auth.java
 /home/a10900612/Asignaturas/Entorno_cliente/Mondublio/mondublio/src/main/java/net/ausiasmarch/servlet/trazabilidad/Trazabilidad.java
+/home/a10900612/Asignaturas/Entorno_cliente/Mondublio/mondublio/src/main/java/net/ausiasmarch/servlet/trazabilidad/TrazabilidadApp.java
 /home/a10900612/Asignaturas/Entorno_cliente/Mondublio/mondublio/src/main/java/net/ausiasmarch/servlet/database/DatabaseService.java
 /home/a10900612/Asignaturas/Entorno_cliente/Mondublio/mondublio/src/main/java/net/ausiasmarch/servlet/Holamundo.java
 /home/a10900612/Asignaturas/Entorno_cliente/Mondublio/mondublio/src/main/java/net/ausiasmarch/servlet/database/DatabaseServlet.java
